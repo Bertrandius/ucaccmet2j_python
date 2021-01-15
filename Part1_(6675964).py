@@ -53,3 +53,7 @@ seattle_totalMonthlyPrecipitation = {}
 
 for month in months:
     seattle_totalMonthlyPrecipitation[month] = sum(seattle_data_2010[month])
+
+# Saves results to a .json file
+with open('Seattle_Precipitation_2010.json', 'w') as outfile:
+    json.dump(seattle_totalMonthlyPrecipitation, outfile)
