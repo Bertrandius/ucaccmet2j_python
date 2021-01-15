@@ -1,5 +1,7 @@
 # Data Analysis for LAS: Day 10
 
+# ---- PART 1 ----
+
 #Preamble: Import necessary libraries
 import json
 
@@ -41,13 +43,6 @@ for measure in seattle_data:
         if f'2010-{month}' in measure['date']:
             seattle_data_2010[month].append(measure['value'])
 
-for month in months:
-    x = 0
-    for measurement_data in seattle_data:
-        if f'2010-{month}' in measurement_data['date']:
-            x += measurement_data['value']
-    .append(x)
-
 # Creates a new dictionary where values are sums of values in seattle_data_2010
 seattle_totalMonthlyPrecipitation = {}
 
@@ -57,3 +52,4 @@ for month in months:
 # Saves results to a .json file
 with open('Seattle_Precipitation_2010.json', 'w') as outfile:
     json.dump(seattle_totalMonthlyPrecipitation, outfile)
+
