@@ -122,4 +122,4 @@ for i in range(4):
         'relativeYearlyPrecipitation': relativeYearlyPrecipitation[i]}
 
 with open('results.json', 'w') as outfile:
-    json.dump(Precipitation_2010, outfil
+    json.dump(Precipitation_2010, outfile)
